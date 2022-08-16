@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400&display=swap');
+
+/* CSS Reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: #fff;
+    letter-spacing: 2px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    width: 100%;
+    position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#wrapper-img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 3rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+#date{
+    font-size: 2.2rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.container{
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.note-box{
+    background-color: #fff;
+    height: 230px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 2px 10px #000;
+}
+
+.add-note-box{
+    background-color: #fff;
+    height: 230px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 10px #000;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+    gap: 0.5rem 0;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.heading{
+    font-size: 1.6rem;
+}
+
+.para{
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.note-section{
+    overflow-y: scroll;
+}
+
+#Notedate{
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: grey;
+}
+
+#menu-icon{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.option{
+    position: relative;
+}
+
+.update-menu{
+    position: absolute;
+    top: -30%;
+    right: 150%;
+    background-color: #fff;
+    padding: 0 0.8rem;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px #000;
+    transform: scale(0);
+    transition: transform 0.2s;
+}
+
+#edit,#delete{
+    font-size: 0.9rem;
+    margin:0.6rem 0;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0 0.3rem;
+}
+
+#edit:hover{
+    color: green;
+}
+
+#delete:hover{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+.note_caption{
+    color: blue;
+}
+
+.icon-box{
+    padding: 1rem;
+    width: 60px;
+    height: 60px;
+    border: 2px dashed blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#icon{
+    color: blue;
+    font-size: 2.5rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.add_content_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.5s;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.content-box{
+    width: 30%;
+    background-color: #fff;
+    padding:0 1rem;
+    border-radius: 3px;
+    box-shadow: 2px 2px 20px #000;
+    transform: scale(0);
+    transition: transform 0.6s;
+}
+
+.content-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid grey;
+}
+
+.content-body{
+    padding: 1rem 0;
+}
+
+#close-icon{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.form-row{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+label{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(56, 149, 255);
+}
+
+#title,#note{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid grey;
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+#note:focus, #title:focus{
+    border: 2px solid rgb(56, 149, 255);
+}
+
+#add-btn{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.8rem;
+    border-radius: 3px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: #fff;
+    cursor: pointer;
+}
+
+.title-alert, .note-alert{
+    font-size: 0.8rem;
+    color: red;
+}
+
+
+
+.read-note-container{
+    position: fixed;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: transform 0.6s;
+}
+
+#read-icon{
+    position: absolute;
+    font-size: 2rem;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* desktop  */
+@media (min-width:1025px) and (max-width:1200px){
+
+    .header{
+        padding: 1rem 0;
+    }
+
+    .header>h1{
+        font-size: 1.8rem;
+    }
+
+    .overlay{
+        padding: 2rem;
+    }
+
+    .container{
+        padding: 3rem;
+    }
+
+    .content-box{
+        width: 40%;
+    }
+}
+
+
+
+/* laptop  */
+@media (min-width:769px) and (max-width:1024px){
+
+    .header{
+        padding: 1rem 0;
+    }
+
+    .header>h1{
+        font-size: 1.8rem;
+    }
+
+    .overlay{
+        padding: 1.5rem;
+    }
+
+    #date{
+        font-size: 1.5rem;
+    }
+
+    .container{
+        padding: 2.5rem;
+    }
+
+    .content-box{
+        width: 60%;
+    }
+}
+
+
+
+
+/* tablet  */
+@media (min-width:481px) and (max-width:768px){
+
+    .header{
+        padding: 0.8rem 0;
+    }
+
+    .header>h1{
+        font-size: 1.5rem;
+    }
+
+    .overlay{
+        padding: 1rem;
+    }
+
+    #date{
+        font-size: 1.3rem;
+    }
+
+    .container{
+        padding: 2rem;
+    }
+
+    .content-box{
+        width: 80%;
+    }
+}
+ 
+
+
+
+/* phone  */
+@media (min-width:320px) and (max-width:480px){
+
+    .header{
+        padding: 0.6rem 0;
+    }
+
+    .header>h1{
+        font-size: 1.3rem;
+    }
+
+    .overlay{
+        padding: 0.5rem;
+    }
+
+    #date{
+        font-size: 1rem;
+    }
+
+    .container{
+        padding: 2rem 1.5rem;
+    }
+
+    .note-box, .add-note-box{
+        height: 180px;
+    }
+
+    .content-box{
+        width: 90%;
+    }
+
+    .content-body{
+        padding: 0.5rem 0;
+    }
+
+    #title, #note{
+        font-size: 0.9rem;
+        padding: 0.2rem;
+    }
+}
+
+
+
+/* min-device  */
+@media (min-width:0px) and (max-width:319px){
+
+    .header{
+        padding: 0.5rem 0;
+    }
+
+    .header>h1{
+        font-size: 1.3rem;
+    }
+
+    .overlay{
+        padding: 0.5rem;
+    }
+
+    #date{
+        font-size: 0.9rem;
+    }
+
+    .container{
+        padding: 1.5rem 1rem;
+    }
+
+    .note-box, .add-note-box{
+        height: 180px;
+    }
+
+    .content-box{
+        width: 95%;
+        padding: 0.5rem;
+    }
+
+    .content-heading{
+        padding: 0.5rem 0;
+    }
+
+    .content-body{
+        padding: 0.5rem 0;
+    }
+
+    #title, #note{
+        font-size: 0.9rem;
+        padding: 0.2rem;
+    }
+
+    .form-row{
+        margin-bottom: 0.3rem;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="header">
+        <h1>Note App</h1>
+    </div>
+    <div class="wrapper">
+        <img src="./background.jpg" alt="" id="wrapper-img">
+        <div class="overlay">
+            <div class="date-box">
+                <p id="date"></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="note-box" id="note_book">
+            <div class="icon-box">
+                <i class="fa-solid fa-plus" id="icon"></i>
+            </div>
+            <br>
+            <p class="note_caption">Add Note...</p>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="add_content_overlay">
+        <div class="content-box">
+            <div class="content-heading">
+                <h3>Add a New Note</h3>
+                <i class="fa-solid fa-xmark" id="close-icon"></i>
+            </div>
+            <div class="content-body">
+                <form>
+                <div class="form-row">
+                    <label for="title">Title:</label><br>
+                    <input type="text" id="title" name="title" placeholder="Enter Your Title" required minlength='3' maxlength="16">
+                    <div class="title-alert"></div>
+                </div>
+                <div class="form-row">
+                    <label for="note">Note:</label><br>
+                    <textarea name="note" id="note" rows="10" placeholder="Write Your Note..." required></textarea>
+                    <div class="note-alert"></div>
+                </div>
+                <div class="form-row">
+                    <button id="add-btn">Add Note</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
+
